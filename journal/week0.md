@@ -37,7 +37,7 @@ I created a billing alarm for my AWS account, and set it to send me an email whe
 
 I created a billing report for my AWS account, and set it to send me an email when my expenses goes beyond $1.00
 
-![screen shot of billing report]()
+![screen shot of billing report](/images/budgets.PNG)
 
 
 
