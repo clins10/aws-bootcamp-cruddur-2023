@@ -31,15 +31,19 @@ And got the output below
 
 I created a billing alarm for my AWS account, and set it to send me an email when my expenses is less than or equal $1.00
 
+#### The screenshot
 ![screen shot of billing alarm](/images/billing-alarm.PNG)
 
 ### Create a Budget Report
 
 I created a billing report for my AWS account, and set it to send me an email when my expenses goes beyond $1.00
 
+#### The screenshot
+
 ![screen shot of billing report](/images/budgets.PNG)
 
-
+## Recreated Logical Architecture Design
+![cruddur logical diagram](/images/Cruddur-Logical-Architecture-Diagram.png)
 
 
 ## Homework Challenges
