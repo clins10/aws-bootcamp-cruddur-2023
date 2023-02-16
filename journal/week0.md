@@ -45,6 +45,8 @@ I created a billing report for my AWS account, and set it to send me an email wh
 ## Recreated Logical Architecture Design
 ![cruddur logical diagram](/images/Cruddur-Logical-Architecture-Diagram.png)
 
+
+
 [Checkout my work on lucidchart](https://lucid.app/lucidchart/97109e36-009f-4786-a10b-28b5f96ad11d/edit?viewport_loc=5%2C101%2C1533%2C703%2C0_0&invitationId=inv_ec725021-6490-4f6f-902b-66952ca410f6)
 
 ## Homework Challenges
