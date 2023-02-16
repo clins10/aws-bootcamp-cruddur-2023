@@ -4,11 +4,11 @@
 
 #### Install AWS CLI and ensure that it works
 
-i already installed the AWS CLI before now, running the **msiexec** command to run the **MSI installer**, as specified on the [AWS CLI installation Documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+I already installed the AWS CLI before now, running the **msiexec** command to run the **MSI installer**, as specified on the [AWS CLI installation Documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-    ```bash
+```bash
     msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
-    ```
+```
 To **confirm the installation** i ran the command below
     
     ```bash
