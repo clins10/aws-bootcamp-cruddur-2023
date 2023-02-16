@@ -11,19 +11,19 @@ I already installed the AWS CLI before now, running the **msiexec** command to r
 ```
 To **confirm the installation** i ran the command below
     
-    ```bash
+```bash
     aws --version
-    ``` 
-    and got the output below
+``` 
+And got the output below
     
 ![screen shot of aws-version](/images/aws-version.PNG)
 
 To prove that my AWS credential were setup correctly i ran the comand below
     
-    ```bash
+```bash
     aws sts get-caller-identity
-    ```
-    and got the output below
+```
+And got the output below
 
 ![screen shot of aws-sts](/images/awscli-ID.PNG)
 
