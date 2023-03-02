@@ -1,7 +1,5 @@
 # Week 1 — App Containerization
 
-# Week 1 — App Containerization
-
 ### Running the docker command locally, issues encountered and how i solved them
 
 Below, the **commands** and errors i encountered following the [instructional guide for week-1](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md), and how i tackled them
@@ -30,15 +28,16 @@ After solving the **No module named flask** error i **cd ..** and ran the **pyth
 pip install flask-cors
 ```
 
-Now a ran the **commands**
+Now i ran the **commands**
 ```bash
 export FRONTEND_URL="*" && export BACKEND_URL="*"
 python3 -m flask run --host=0.0.0.0 --port=4567
 ```
 And i was able to successfully access the backend api
 
-success response in the terminal
+#### Success response in the terminal
+
 ![200-response in the terminal](/images/access-to-backend-api.PNG)
 
-Access to backend api in the browser
+#### Access to backend api in the browser
 ![access to backend in the browser](/images/access-to-backend-api-browser.PNG)
