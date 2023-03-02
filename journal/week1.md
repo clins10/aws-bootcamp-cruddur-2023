@@ -41,3 +41,54 @@ And i was able to successfully access the backend api
 
 #### Access to backend api in the browser
 ![access to backend in the browser](/images/access-to-backend-api-browser.PNG)
+
+
+## Building The Container
+
+```bash
+cd ..
+docker build -t  backend-flask ./backend-flask
+```
+## Run The Container
+
+```bash
+docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
+```
+
+### Running the container in detachable mode
+| the **--rm** tells docker to remove the container whenever it's stopped
+
+```bash
+docker container run --rm -p 4567:4567 -d backend-flask
+```
+### Some Useful Docker Commands
+
+- Get the ID of the running container or the images runnings
+```bash
+docker ps
+docker images
+```
+
+- Check Container logs
+```bash
+docker logs CONTAINER_ID -f
+docker logs backend-flask -f
+docker logs $CONTAINER_ID -f
+```
+- Debugging adjacent containers with other containers
+```bash
+docker run --rm -it curlimages/curl "-X GET http://localhost:4567/api/activities/home -H \"Accept: application/json\" -H \"Content-Type: application/json\""
+```
+
+- Login to the Running container
+```bash
+docker exec CONTAINER_ID -it /bin/bash
+```
+- Delete an image
+```bash
+docker image rm backend-flask --force
+```
+- Overriding port
+```bash
+FLASK_ENV=production PORT=8080 docker run -p 4567:4567 -it backend-flask
+```
