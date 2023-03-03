@@ -141,6 +141,106 @@ docker-compose up
 
 Time to add some database services, we ain't making of them not just yet
 
+- Postgres
+
+I added the following code to the **docker-compose.yml** file
+```bash
+db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local
+```
+
+- DynamoDB Local
+
+Also added the code to **docker-compose.yml** file
+
+```bash
+dynamodb-local:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+```
+
+Then ran the **docker-compose up** command
+
+```bash
+docker-compose up
+```
+
+### Runnning DynamoDB Local
+
+Followed the example in the [100DaysOfCloud](https://github.com/100DaysOfCloud/challenge-dynamodb-local)
+to run **dynamoDB** in the terminal to create the following
+
+- Create A Table
+
+```bash
+aws dynamodb create-table \
+    --endpoint-url http://localhost:8000 \
+    --table-name cruddur_crud \
+    --attribute-definitions \
+        AttributeName=Artist,AttributeType=S \
+        AttributeName=SongTitle,AttributeType=S \
+    --key-schema AttributeName=Artist,KeyType=HASH AttributeName=SongTitle,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+    --table-class STANDARD
+```
+
+#### The Result
+
+![create table](/images/create-cruddur-table.PNG)
+
+- Create an Item
+  
+```bash
+aws dynamodb put-item \
+    --endpoint-url http://localhost:8000 \
+    --table-name cruddur_cruds \
+    --item \
+        '{"Artist": {"S": "No One You Know"}, "SongTitle": {"S": "Call Me Today"}, "AlbumTitle": {"S": "Somewhat Famous"}}' \
+    --return-consumed-capacity TOTAL
+```
+
+#### The Result
+
+![create-an-item](/images/create-an-item-dynamoDB.PNG)
+
+
+- List Tables
+
+```bash
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+```
+
+#### The Result
+
+![list-tables](/images/dynamoDB-local-list-tables.PNG)
+
+
+- Get Records
+
+```bash
+aws dynamodb scan --table-name cruddur_cruds --query "Items" --endpoint-url http://localhost:8000
+```
+
+#### The result
+
+![get-records](/images/create-a-record-dynamoDB.PNG)
 
 ## HomeWork - Implementing **Frontend and Backend Notifactions** Page
 
