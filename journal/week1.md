@@ -1,6 +1,6 @@
 # Week 1 — App Containerization
 
-### Running the docker command locally, issues encountered and how i solved them
+## **Containerizing The Backend** locally, issues encountered and how i solved them
 
 Below, the **commands** and errors i encountered following the [instructional guide for week-1](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md), and how i tackled them
 
@@ -92,3 +92,52 @@ docker image rm backend-flask --force
 ```bash
 FLASK_ENV=production PORT=8080 docker run -p 4567:4567 -it backend-flask
 ```
+
+## **Containerizing The Frontend**
+
+Here just as specified the in the guide for week1
+**cd** to the main working directory which is **aws-bootcamp-cruddur-2023**
+then run the below command, to install the needed node.js modules
+
+```bash
+cd frontend-react-js && npm i
+```
+And 
+```bash
+cd ..
+```
+|| to go back the main working directory
+
+#### Created a **Dockerfile** in the **frontend-react-js** directory for building of **frontend image**
+
+#### Build the Container
+```bash
+docker build -t frontend-react-js ./frontend-react-js
+```
+
+#### Run the container in detached mode
+```bash
+docker run -p 3000:3000 -d frontend-react-js
+```
+##### That runs without error
+
+
+## Running Multiple Containers
+
+In the root directory i create a **docker-compose.yaml** file
+- Run 
+```bash
+docker-compose up
+```
+#### Frontend result
+![front-screenshot](/images/)
+
+#### Backend result
+![backend result browser](/images/)
+
+
+
+## Adding DynamoDB Local and Postgres
+
+Time to add some database services, we ain't making of them not just yet
+
