@@ -130,10 +130,10 @@ In the root directory i create a **docker-compose.yaml** file
 docker-compose up
 ```
 #### Frontend result
-![front-screenshot](/images/)
+![front-screenshot](/images/frontend-result-browser.PNG)
 
 #### Backend result
-![backend result browser](/images/)
+![backend result browser](/images/access-to-backend-api-browser.PNG)
 
 
 
@@ -150,7 +150,7 @@ Time to add some database services, we ain't making of them not just yet
 Following the video on [Write a Flask Backend Endpoint for Notifications](https://www.youtube.com/watch?v=k-_o0cCpksk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=28) i was able to write the backend api for the notification successfully without stress
 
 ### The Result
-![flask backend for notification](/images/)
+![flask backend for notification](/images/flask-backend.PNG)
   
 
 - Frontend Notifications page
@@ -160,4 +160,4 @@ Following the video on [Write a React Page for Notifications](https://www.youtub
 
 ### The Result
 
-![frontend notification page](/images/)
+![frontend notification page](/images/notification-page-frontend.PNG)
