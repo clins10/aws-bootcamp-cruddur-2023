@@ -242,6 +242,41 @@ aws dynamodb scan --table-name cruddur_cruds --query "Items" --endpoint-url http
 
 ![get-records](/images/create-a-record-dynamoDB.PNG)
 
+
+### Running Postgres
+
+To run postgres as layed out in the instructional guide, i installed the **postgres client in the gitpod** by pasting the code below in the **.gitpod.yml** file
+
+```bash
+  - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+```
+
+Then ran the command individually in the terminal
+
+```bash
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+```
+
+```bash
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+```
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt install -y postgresql-client-13 libpq-dev
+```
+
+
+
+
 ## HomeWork - Implementing **Frontend and Backend Notifactions** Page
 
 - Backend Notification page.
