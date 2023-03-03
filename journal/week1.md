@@ -144,16 +144,20 @@ Time to add some database services, we ain't making of them not just yet
 
 ## HomeWork - Implementing **Frontend and Backend Notifactions** Page
 
-- Backend Notification page
-following the video on [Write a Flask Backend Endpoint for Notifications](https://www.youtube.com/watch?v=k-_o0cCpksk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=28) i was able to write the backend api for the notification successfully without stress
+- Backend Notification page.
 
-### The output
+
+Following the video on [Write a Flask Backend Endpoint for Notifications](https://www.youtube.com/watch?v=k-_o0cCpksk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=28) i was able to write the backend api for the notification successfully without stress
+
+### The Result
 ![flask backend for notification](/images/)
   
 
-
 - Frontend Notifications page
-following the video on [Write a React Page for Notifications](https://www.youtube.com/watch?v=k-_o0cCpksk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=28) i was able to write the React code for the notification successfully without stress, and also went ahead to implement an **active** feature for **notifications, and messages pages** to improve the user experience - letting the users know which page they are currently on
 
+
+Following the video on [Write a React Page for Notifications](https://www.youtube.com/watch?v=k-_o0cCpksk&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=28) i was able to write the React code for the notification successfully without stress, and also went ahead to implement an **active** feature for **notifications, and messages pages** to improve the user experience - letting the users know which page they are currently on
+
+### The Result
 and arrived at the result as shown below
 ![frontend notification page](/images/)
